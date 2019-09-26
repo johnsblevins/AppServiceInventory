@@ -53,3 +53,5 @@ foreach ($sub in $subs)
 
     $appinfo_array += $appinfo
 }
+
+$appinfo_array | Export-Csv appServiceInventory.csv
