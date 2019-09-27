@@ -18,6 +18,9 @@ foreach ($sub in $subs)
 
         Write-Output "Processing: $($app.name)"
 
+        Add-Member -InputObject $appinfo -MemberType NoteProperty -Name Subscription_Id -Value $sub.Id
+        Add-Member -InputObject $appinfo -MemberType NoteProperty -Name Subscription_Name -Value $sub.Name
+
         Add-Member -InputObject $appinfo -MemberType NoteProperty -Name App_Id -Value $app.Id
         Add-Member -InputObject $appinfo -MemberType NoteProperty -Name App_Name -Value $app.Name
         Add-Member -InputObject $appinfo -MemberType NoteProperty -Name App_ResourceGroup -Value $appResourceGroup        
