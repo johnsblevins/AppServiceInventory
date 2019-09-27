@@ -49,10 +49,10 @@ foreach ($sub in $subs)
             Add-Member -InputObject $appinfo -MemberType NoteProperty -Name ASE_ID -Value ""
             Add-Member -InputObject $appinfo -MemberType NoteProperty -Name ASE_Name -Value ""            
         }
-
+        $appinfo_array += $appinfo
     }
 
-    $appinfo_array += $appinfo
+   
 }
 
 $appinfo_array | Export-Csv appServiceInventory.csv -NoTypeInformation
